@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CreateAccount</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="register_button_text">Register</string>
+    <string name="google_button_text">Google</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="login_account">LOGIN ACCOUNT</string>
 </resources>

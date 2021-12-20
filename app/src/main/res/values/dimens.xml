@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_width_log_reg">120dp</dimen>
+    <dimen name="button_height_log_reg">48dp</dimen>
+</resources>

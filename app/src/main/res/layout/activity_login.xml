@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
-        android:text="LOGIN ACCOUNT"
+        android:text="@string/login_account"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/tvLogin"
         app:layout_constraintStart_toStartOf="@+id/tvLogin"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password_hint"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/edit_email_login"
         app:layout_constraintStart_toStartOf="@+id/edit_email_login"
@@ -44,10 +44,10 @@
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/button_width_log_reg"
+        android:layout_height="@dimen/button_height_log_reg"
         android:layout_marginTop="24dp"
-        android:text="LOGIN"
+        android:text="@string/login_button_text"
         app:layout_constraintEnd_toEndOf="@+id/edit_password_login"
         app:layout_constraintStart_toStartOf="@+id/edit_password_login"
         app:layout_constraintTop_toBottomOf="@+id/edit_password_login" />
@@ -60,17 +60,37 @@
         android:layout_marginTop="16dp"
         android:text="Don't have an account?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_login_with_google" />
 
     <TextView
         android:id="@+id/tvRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:text="Register"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDontHaveAccount"
         app:layout_constraintStart_toEndOf="@+id/tvDontHaveAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvDontHaveAccount" />
+
+    <TextView
+        android:id="@+id/tv_or_login_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="or"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+    <Button
+        android:id="@+id/button_login_with_google"
+        android:layout_width="@dimen/button_width_log_reg"
+        android:layout_height="@dimen/button_height_log_reg"
+        android:layout_marginTop="8dp"
+        android:text="@string/google_button_text"
+        app:layout_constraintEnd_toEndOf="@+id/tv_or_login_activity"
+        app:layout_constraintStart_toStartOf="@+id/tv_or_login_activity"
+        app:layout_constraintTop_toBottomOf="@+id/tv_or_login_activity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
