@@ -42,8 +42,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-
-
     private fun loginEmail() {
 
         binding.buttonLogin.setOnClickListener {
