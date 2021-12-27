@@ -8,7 +8,9 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -23,5 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         }
+
     }
+
 }

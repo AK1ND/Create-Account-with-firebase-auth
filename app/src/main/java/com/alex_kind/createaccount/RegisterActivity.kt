@@ -10,6 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.alex_kind.createaccount.databinding.ActivityRegisterBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInApi
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -107,10 +108,11 @@ class RegisterActivity : AppCompatActivity() {
 
         laucher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
+
             try {
                 val account = task.getResult(ApiException::class.java)
                 if (account != null) {
-                    firebaseAuthWithGoogle(account.idToken)
+                    firebaseAuthWithGoogle(account.idToken.toString())
                 }
             } catch (e: ApiException) {
                 Log.d("FirebaseGoogleLog", "Api exception")
@@ -172,9 +174,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
     }
     //Google Auth end.
-
 
 }

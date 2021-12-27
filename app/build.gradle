@@ -52,8 +52,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
 
     //Auth Sign In
-    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.0.0'
 
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.google.android.gms:play-services-fitness:21.0.0'
 }

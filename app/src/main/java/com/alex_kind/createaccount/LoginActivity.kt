@@ -104,11 +104,12 @@ class LoginActivity : AppCompatActivity() {
             try {
                 val account = task.getResult(ApiException::class.java)
                 if (account != null) {
-                    firebaseAuthWithGoogle(account.idToken)
+                    firebaseAuthWithGoogle(account.idToken.toString())
                 }
             } catch (e: ApiException) {
                 Log.d("FirebaseGoogleLog", "Api exception")
             }
+
 
         }
 
